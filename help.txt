@@ -1,0 +1,49 @@
+<button onclick="console.log('Hello!')">Click me!</button> - в html;
+
+EventListener:
+const optionA = document.querySelector('#optionA');
+const optionB = document.querySelector('#optionB');
+optionA.addEventListener('click', onOptionA);
+optionB.addEventListener('click', onOptionB);
+function onoptionA() {
+    console.log("AAAAAAA");
+    optionB.removeEventListener('click', optionB);
+}
+function onoptionB() {
+    console.log("BBBBBBB");
+    optionA.removeEventListener('click', optionA);
+}
+
+const item1 = document.querySelector('#item-1');
+const item2 = document.querySelector('#item-2');
+const item3 = document.querySelector('#item-3');
+
+item1.addEventListener('click', function () {
+    console.log(111111);
+});
+item2.addEventListener('click', function (event) {
+    console.log(222222);
+    event.stopPropagation()---------------не показує батьків;
+});
+item1.addEventListener('click', function () {
+    console.log(333333);
+});
+
+
+Делегування подій:
+ul>li*5
+
+const list = document.querySelector('ul');
+list.addEventListener('click', function (e) {
+if(e.target.closest('li')) {
+    e.target.innerHTML = e.target.innerHTML ** 2; 
+}
+});
+
+
+const addNumber = document.querySelector('#add-number');
+addNumber.addEventListener('click', function () {
+    const li = document.createElement('li');
+    li.innerHTML = '10';
+    list.appendChild(li);
+});
