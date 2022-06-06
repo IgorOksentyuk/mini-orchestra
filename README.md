@@ -1,4 +1,4 @@
-####Application that plays different sounds of instruments by clicking or by pressing a key.
+**Application that plays different sounds of instruments by clicking or by pressing a key.**
 
 ---
 
